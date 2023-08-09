@@ -14,6 +14,9 @@
     # Provides my personal configuration
     personal.url = "github:nikitawootten/infra";
     personal.inputs.nixpkgs.follows = "nixpkgs";
+    personal.inputs.home-manager.follows = "home-manager";
+    personal.inputs.nix-index-database.follows = "nix-index-database";
+    personal.inputs.devenv.follows = "devenv";
   };
 
   outputs = { self, nixpkgs, home-manager, nix-index-database, devenv, personal }: {

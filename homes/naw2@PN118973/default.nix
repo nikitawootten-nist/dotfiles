@@ -29,4 +29,8 @@ in
   programs.zsh.profileExtra = ''
     ${envSetup "zsh"}
   '';
+
+  imports = [
+    ./java.nix
+  ];
 }
