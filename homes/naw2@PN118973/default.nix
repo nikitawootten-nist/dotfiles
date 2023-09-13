@@ -13,13 +13,14 @@ in
   home.packages = with pkgs; [
     awscli2
     utm
-    kitty
     rectangle
 
     go
     hugo
     python3Full
     maven
+    nodejs_20
+    bun
   ];
 
   programs.bash.profileExtra = ''
@@ -30,7 +31,15 @@ in
     ${envSetup "zsh"}
   '';
 
-  imports = [
-    ./java.nix
-  ];
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "JetBrains Mono";
+      package = pkgs.jetbrains-mono;
+      size = 11;
+    };
+    theme = "Monokai Soda";
+  };
+
+  imports = [ ./oscal.nix ];
 }

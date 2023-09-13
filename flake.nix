@@ -21,9 +21,7 @@
 
   outputs = { self, nixpkgs, home-manager, nix-index-database, devenv, personal }: {
     homeConfigurations = (personal.lib.mkHomes {
-      inherit nixpkgs home-manager;
       specialArgs = { inherit nix-index-database devenv; };
-      overlays = [ personal.overlays.default ];
       configBasePath = ./homes;
       defaultModules = [
         personal.homeModules.default

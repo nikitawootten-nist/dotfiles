@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Occasionally updates break my system, these are some of the steps I typically have to take to reinstall:
+# Occasionally updates break my system, these are some of the steps I typically have to take to reinstall.
+# Note this is meant for my machine and may not work on yours.
 
 # Revert system bash and zsh configuration to a pre-nix state
 sudo mv /etc/bash.bashrc.backup-before-nix /etc/bash.bashrc
