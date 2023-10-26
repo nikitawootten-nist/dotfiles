@@ -24,7 +24,7 @@
       specialArgs = { inherit nix-index-database devenv; };
       configBasePath = ./homes;
       defaultModules = [
-        personal.homeModules.default
+        personal.homeModules.personal
         nix-index-database.hmModules.nix-index
       ];
       homes = {
